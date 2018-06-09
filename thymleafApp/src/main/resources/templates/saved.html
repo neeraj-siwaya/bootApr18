@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: common">
+</head>
+<body>
+<div class="container">
+	
+	<div class="row">
+		<div class="alert alert-success">
+			<h3>Successfully saved.</h3>
+			
+		</div>
+	</div><!-- first row ends -->
+	<hr/>
+	<div class="row" th:replace="index :: empForm">
+	
+	</div><!-- second row ends -->
+	
+</div><!-- container ends -->
+
+
+</body>
+</html>

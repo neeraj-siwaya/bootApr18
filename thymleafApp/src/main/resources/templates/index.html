@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: common">
+</head>
+<body>
+<div class="container">
+  <div class="row" th:fragment="empForm">
+	<form action="save" class="form-horizontal" method="post">
+		<div class="form-group">
+			<label>Name</label>
+			<input type="text" class="form-control" name="name"/>
+		</div>
+		<div class="form-group">
+			<label>Job</label>
+			<input type="text" class="form-control" name="job"/>
+		</div>
+		<div class="form-group">
+			<label>Salary</label>
+			<input type="text" class="form-control" name="Salary"/>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Save</button>
+			<a href="emps">Load Employees</a>
+		</div>
+	</form>
+  </div>
+</div>
+</body>
+</html>

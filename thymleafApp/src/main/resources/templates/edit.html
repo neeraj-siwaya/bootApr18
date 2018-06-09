@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: common">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+	<form action="update" class="form-horizontal" method="post" th:object="${emp}">
+		<div class="form-group" >
+			<label>Name</label>
+			<input type="text" class="form-control" name="name" th:value="*{name}"/>
+			<input type="hidden"  name="id" th:value="*{id}"/>
+		</div>
+		<div class="form-group">
+			<label>Job</label>
+			<input type="text" class="form-control" name="job" th:value="*{job}"/>
+		</div>
+		<div class="form-group">
+			<label>Salary</label>
+			<input type="text" class="form-control" name="Salary" th:value="*{salary}"/>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Update</button>
+			
+		</div>
+	</form>
+  </div>
+</div>
+</body>
+</html>

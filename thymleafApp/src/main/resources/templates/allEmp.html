@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="header :: common">
+</head>
+<body>
+<div class="container">
+	
+	<div class="row">
+	
+		<div class="alert alert-success" th:if="${message != null}">
+			<h3 th:text="${message}"></h3>
+			
+		</div>
+	</div><!-- first row ends -->
+	<hr/>
+	<div class="row">
+		<table class="table table-bordered table-hover table-striped">
+			<tr><td>Name</td><td>Job</td><td>Salary</td><td>Action</td></tr>
+			<tr th:each="emp : ${empList}">
+			<td th:text="${emp.name}"></td>
+			<td th:text="${emp.job}"></td>
+			<td th:text="${emp.salary}"></td>
+			<td><a th:href="@{edit(id=${emp.id})}">edit</a>
+			&nbsp;<a th:href="@{delete(id=${emp.id})}">delete</a>
+			</td>
+			</tr>
+		</table>
+	</div><!-- second row ends -->
+	
+</div><!-- container ends -->
+
+
+</body>
+</html>
